@@ -22,6 +22,8 @@
   box-sizing: border-box;
 }
 
+
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
@@ -278,6 +280,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-left: 10px;
   transition: 0.3s ease-in-out;
   line-height: 1;
+}
+a.con-btn:focus,
+a.con-btn:active,
+a.con-btn:hover,
+a.con-btn:visited {
+  text-decoration: none;
 }
 .banner button:hover svg {
   margin-left: 25px;
