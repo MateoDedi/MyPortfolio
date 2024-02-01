@@ -291,7 +291,9 @@ a.con-btn:visited {
   margin-left: 25px;
 }
 .banner img {
-  animation: updown 3s linear infinite;
+  border: 5px solid white;
+  border-radius: 50px;
+  animation: updown 5s linear infinite;
 }
 @keyframes updown {
     0% {
