@@ -1,7 +1,7 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { Container, Row, Col, Tab} from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/forth project.jpg";
-import projImg2 from "../assets/img/second work.jpg";
+import projImg1 from "../assets/img/JOBtracker_img.PNG";
+import projImg2 from "../assets/img/BEMOVIES_img.PNG";
 import projImg3 from "../assets/img/project1.jpg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
@@ -11,12 +11,11 @@ export const Projects = () => {
 
   const projects = [
     {
-      
-      description: "Design & Development",
+      description: "Job Tracker Website to keep track of job applications. Built with React, Node.js, Express, and MongoDB.",
       imgUrl: projImg1,
     },
     {
-      description: "Design & Development",
+      description: "BeMovies is a movie database website that allows users to search for movies and view details. Built with Javascript, CSS and HTML.",
       imgUrl: projImg2,
     },
     {
@@ -34,7 +33,7 @@ export const Projects = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projects</h2>
-                <p>A selection of the projects that I am most proud of sharing with you!</p>
+                <p>A selection of projects that I am most proud of displaying!</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
@@ -50,12 +49,6 @@ export const Projects = () => {
                           })
                         }
                       </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>

@@ -21,7 +21,7 @@ export const Banner = () => {
     }, delta);
 
     return () => { clearInterval(ticker) };
-  }, [text])
+  })
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -58,7 +58,7 @@ export const Banner = () => {
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className="tagline">Welcome to my Portfolio</span>
                   <h1>{`Hi! I'm Mateo! I'm a`} <br /> <span className="txt-rotate" dataPeriod="500" data-rotate='[ "Web Developer"]'><span className="wrap">{text}</span></span></h1>
-                  <p>👋 Hello, World! I'm Mateo Dedi, a passionate front-end developer with a flair for creating
+                  <p>👋 Hello! I'm Mateo Dedi, a passionate front-end developer with a flair for creating
                     visually stunning and user-friendly websites. With a keen eye for design and a love for crafting
                     seamless user experiences, I translate ideas into interactive and responsive web applications.
                   </p>
