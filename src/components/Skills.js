@@ -28,11 +28,10 @@ export const Skills = () => {
         <div className="row">
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
-              <h2>About Skills</h2>
+              <h2>Skills</h2>
               <p>
-                Perpetually expanding my toolkit, the skills section unveils a
-                pragmatic blend of creativity and technical know-how,
-                highlighting a continuous journey of learning new languages and
+                Perpetually expanding my toolkit, 
+                I wish to highlight a continuous journey of learning new languages and
                 technologies!<br></br>
               </p>
               <Carousel

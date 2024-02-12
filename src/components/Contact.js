@@ -1,10 +1,20 @@
-import { useState } from "react";
+import { React, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
+
+export const formInitialDetails = {
+  firstName: 'brian',
+  lastName: 'ded',
+  email: 'lll@mom.com',
+  phone: '5555',
+  message: 'hhiii'
+}
+
 export const Contact = () => {
+
   const formInitialDetails = {
     firstName: '',
     lastName: '',
@@ -12,6 +22,7 @@ export const Contact = () => {
     phone: '',
     message: ''
   }
+  
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState('Send');
   const [status, setStatus] = useState({});
@@ -25,6 +36,7 @@ export const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Form submission started");
     setButtonText("Sending...");
     let response = await fetch("http://localhost:3000/contact", {
       method: "POST",
@@ -33,13 +45,17 @@ export const Contact = () => {
       },
       body: JSON.stringify(formDetails),
     });
+    console.log("Response received:", response);
     setButtonText("Send");
     let result = await response.json();
+    console.log("Response JSON:", result);
     setFormDetails(formInitialDetails);
     if (result.code === 200) {
       setStatus({ succes: true, message: 'Message sent successfully'});
+      console.log("Message sent successfully");
     } else {
       setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
+      console.log("Error in sending message");
     }
   };
 
@@ -50,7 +66,7 @@ export const Contact = () => {
           <Col size={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) =>
-                <img className={isVisible ? "animate__animated animate__zoomIn" : ""} src={contactImg} alt="Contact Us"/>
+                <img className={isVisible ? "animate__animated animate__zoomIn" : ""} src={contactImg} alt="Contact Me"/>
               }
             </TrackVisibility>
           </Col>

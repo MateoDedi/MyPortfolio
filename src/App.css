@@ -409,6 +409,7 @@ a.con-btn:visited {
     border: 1px solid rgba(255, 255, 255, 1);
 }
 .nav-link#projects-tabs-tab-first {
+  
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 55px 0px 0px 55px;
 }
@@ -424,7 +425,8 @@ a.con-btn:visited {
   position: relative;
   border-radius: 30px;
   overflow: hidden;
-  margin-bottom: 24px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .proj-imgbx::before {
   content: "";
