@@ -1,5 +1,5 @@
 import { Container, Navbar, Row, Col } from "react-bootstrap";
-import logo from "../assets/img/MD_logo.png";
+import logo from "../assets/img/Portfolio_logo.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 
