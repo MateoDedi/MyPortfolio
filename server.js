@@ -27,7 +27,7 @@ const mailOptions = {
     address: formInitialDetails.email //their email
   },
   to: process.env.USER, // list of receivers
-  subject: "testemail 5", // Subject line
+  subject: "Portfolio Form", // Subject line
   text: `Name: ${formInitialDetails.firstName}\nEmail: ${formInitialDetails.email}\nEmail: ${formInitialDetails.phone}\nMessage: ${formInitialDetails.message}`, // plain text body
 };
 
@@ -42,18 +42,6 @@ const sendMail = async (transporter, mailOptions) => {
 }
 
 sendMail(transporter, mailOptions);
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
