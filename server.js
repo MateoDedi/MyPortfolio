@@ -1,47 +1,46 @@
-import { formInitialDetails } from './src/components/Contact.js';
 require("dotenv").config();
 const nodemailer = require("nodemailer");
+const express = require('express');
+const app = express();
+app.use(express.json());
+const cors = require('cors');
+app.use(cors());
 
-
-//Able to send an email
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   host: "smtp.gmail.com",
   port: 587,
-  secure: false, // true for 465, false for other ports
+  secure: false,
   auth: {
-    // gmail user authentication
     user: process.env.USER,
     pass: process.env.APP_PASSWORD,
   },
 });
 
-  // const userName = 'elon';
-  // const userEmail = 'elonadedi@hotmail.com';
-  // const userMessage = 'trarara';
+app.post('/contact', async (req, res) => {
+  const formDetails = req.body;
 
-// the content of the emails sent
-const mailOptions = {
-  from: {
-    name: formInitialDetails.firstName, //who will email me
-    address: formInitialDetails.email //their email
-  },
-  to: process.env.USER, // list of receivers
-  subject: "Portfolio Form", // Subject line
-  text: `Name: ${formInitialDetails.firstName}\nEmail: ${formInitialDetails.email}\nEmail: ${formInitialDetails.phone}\nMessage: ${formInitialDetails.message}`, // plain text body
-};
+  const mailOptions = {
+    from: {
+      name: formDetails.firstName,
+      address: formDetails.email
+    },
+    to: process.env.USER,
+    subject: "Portfolio Form",
+    text: `Name: ${formDetails.firstName}\nEmail: ${formDetails.email}\nPhone: ${formDetails.phone}\nMessage: ${formDetails.message}`,
+  };
 
-const sendMail = async (transporter, mailOptions) => {
   try {
-    await transporter.sendMail(mailOptions)
-    console.log('Email has been sent')
-    console.log("Message sent: %s", sendMail.messageId);
+    await transporter.sendMail(mailOptions);
+    console.log('Email has been sent');
+    res.status(200).json({ code: 200, message: 'Email sent successfully' });
   } catch (error) {
     console.error(error);
+    res.status(500).json({ code: 500, message: 'Error in sending email' });
   }
-}
+});
 
-sendMail(transporter, mailOptions);
+app.listen(3001, () => console.log('Server is running on port 3001'));
 
 
 
