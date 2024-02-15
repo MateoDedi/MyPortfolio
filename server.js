@@ -1,3 +1,6 @@
+//This is the original file for the server. It is not used in the final version of the project.
+//The server is hosted on Vercel and the final code is in the file api/contact.js
+
 require("dotenv").config();
 const nodemailer = require("nodemailer");
 const express = require('express');

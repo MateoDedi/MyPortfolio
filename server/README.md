@@ -1,1 +1,0 @@
-# This is the back-end of my personal portfolio. I hava used Node.JS, Express.JS and Nodemailer to build it!
