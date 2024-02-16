@@ -2,15 +2,23 @@
 require("dotenv").config();
 const nodemailer = require("nodemailer");
 
+// const transporter = nodemailer.createTransport({
+//   service: 'gmail',
+//   host: "smtp.gmail.com",
+//   port: 587,
+//   secure: false,
+//   auth: {
+//     user: process.env.USER,
+//     pass: process.env.APP_PASSWORD,
+//   },
+// });
+
 const transporter = nodemailer.createTransport({
-  // service: 'office365',
-  host: 'smtp.office365.com',
-  port: 587,
-  secure: false,
+  service: 'gmail',
   auth: {
-    user: process.env.USER,
-    pass: process.env.APP_PASSWORD,
-  },
+    user: 'portfolio.mateo.dedi@gmail.com',
+    pass: 'phkgxfukydesnlgf'
+  }
 });
 
 module.exports = async (req, res) => {
@@ -22,7 +30,8 @@ module.exports = async (req, res) => {
         name: formDetails.firstName,
         address: formDetails.email
       },
-      to: process.env.USER,
+      // to: process.env.USER,
+      to: 'portfolio.mateo.dedi@gmail.com',
       subject: "Portfolio Form",
       text: `Name: ${formDetails.firstName}\nEmail: ${formDetails.email}\nPhone: ${formDetails.phone}\nMessage: ${formDetails.message}`,
     };
