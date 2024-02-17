@@ -30,7 +30,7 @@ module.exports = async (req, res) => {
         name: formDetails.firstName,
         address: formDetails.email
       },
-      to: process.env.USER,
+      to: process.env.DESTINATION,
       subject: "Portfolio Form",
       text: `Name: ${formDetails.firstName}\nEmail: ${formDetails.email}\nPhone: ${formDetails.phone}\nMessage: ${formDetails.message}`,
     };
