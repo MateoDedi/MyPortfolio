@@ -13,14 +13,6 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// const transporter = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth: {
-//     user: process.env.USER,
-//     pass: process.env.APP_PASSWORD,
-//   }
-// });
-
 module.exports = async (req, res) => {
   if (req.method === 'POST') {
     const formDetails = req.body;
