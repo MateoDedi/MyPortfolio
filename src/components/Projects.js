@@ -4,8 +4,6 @@ import projImg1 from "../assets/img/JOBtracker_img.PNG";
 import projImg2 from "../assets/img/BEMOVIES_img.PNG";
 import projImg3 from "../assets/img/meal_finder_img.PNG";
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import 'animate.css';
-import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
 
@@ -32,9 +30,7 @@ export const Projects = () => {
       <Container>
         <Row>
           <Col size={12}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
+              <div>
                 <h2>Projects</h2>
                 <p>A selection of projects that I am most proud of displaying!
                   <br/>
@@ -42,7 +38,7 @@ export const Projects = () => {
                   Clicking on the images will redirect you to their respective deployed websites!
                 </p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                  <Tab.Content id="slideInUp">
                     <Tab.Pane eventKey="first">
                       <Row>
                         {
@@ -59,8 +55,7 @@ export const Projects = () => {
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
-              </div>}
-            </TrackVisibility>
+              </div>
           </Col>
         </Row>
       </Container>
