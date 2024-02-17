@@ -49,12 +49,6 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    let response = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json;charset=utf-8" },
-      body: JSON.stringify(formDetails),
-    });
-
     if (!isValidFirstName(formDetails.firstName)) {
       alert("Invalid first name. Please enter a valid first name.");
       return;
@@ -79,18 +73,14 @@ export const Contact = () => {
       return;
     }
 
-    if (
-      !isValidFirstName(formDetails.firstName) ||
-      !isValidLastName(formDetails.lastName) ||
-      !isValidPhoneNumber(formDetails.phoneNumber) ||
-      !isValidEmail(formDetails.email)
-    ) {
-      alert("Please fill in the required fields.");
-      return;
-    }
-
     // If all validations pass, change the button's text
     setButtonText("Sending...");
+
+    let response = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json;charset=utf-8" },
+      body: JSON.stringify(formDetails),
+    });
 
     let result = await response.json();
 
