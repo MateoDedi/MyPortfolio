@@ -16,8 +16,8 @@ const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.USER,
-    pass: process.env.APP_PASSWORD,
+    user: 'portfolio.mateo.dedi@gmail.com',
+    pass: 'phkgxfukydesnlgf'
   }
 });
 
@@ -30,8 +30,8 @@ module.exports = async (req, res) => {
         name: formDetails.firstName,
         address: formDetails.email
       },
-      to: process.env.USER,
-      // to: 'portfolio.mateo.dedi@gmail.com',
+      // to: process.env.USER,
+      to: 'portfolio.mateo.dedi@gmail.com',
       subject: "Portfolio Form",
       text: `Name: ${formDetails.firstName}\nEmail: ${formDetails.email}\nPhone: ${formDetails.phone}\nMessage: ${formDetails.message}`,
     };
