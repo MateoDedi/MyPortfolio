@@ -281,12 +281,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: 0.3s ease-in-out;
   line-height: 1;
 }
-a.con-btn:focus,
-a.con-btn:active,
-a.con-btn:hover,
-a.con-btn:visited {
-  text-decoration: none;
+
+button.con-btn {
+  display: inline-block;
 }
+
 .banner button:hover svg {
   margin-left: 25px;
 }
@@ -312,7 +311,8 @@ a.con-btn:visited {
 
 /************ Skills Css ************/
 .skill {
-  padding: 0 0 50px 0;
+  margin: 50px 0;
+  padding: 100px 0 50px 0;
   position: relative;
 }
 .skill-bx {

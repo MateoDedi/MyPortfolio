@@ -56,15 +56,15 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                <div className={isVisible ? "animate__animated animate__fadeIn animate__once" : ""}>
                   <span className="tagline">Welcome to my Portfolio</span>
                   <h1>{`Hi! I'm Mateo and I'm a`} <br /> <span className="txt-rotate" dataperiod="500" data-rotate='[ "Web Developer"]'><span className="wrap">{text}</span></span></h1>
                   <p>👋 Hello! I'm Mateo Dedi, a passionate full stack developer specialized in frontend with a flair for creating
                     visually stunning and user-friendly websites. With a keen eye for design and a love for crafting
                     seamless user experiences, I translate ideas into interactive and responsive web applications!
                   </p>
-                  <a className="con-btn" href="#connect">
-                    <button>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <a className="con" href="#connect">
+                    <button className="con-btn">Let's Connect <ArrowRightCircle size={25} /></button>
                   </a>
                 </div>}
             </TrackVisibility>
