@@ -1,7 +1,7 @@
 import { Container, Row, Col, Tab} from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/JOBtracker_img.PNG";
-import projImg2 from "../assets/img/BEMOVIES_img.PNG";
+import projImg1 from "../assets/img/JOBtracker_img.png";
+import projImg2 from "../assets/img/BEMOVIES_img.png";
 import projImg3 from "../assets/img/meal_finder_img.PNG";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 
@@ -9,16 +9,19 @@ export const Projects = () => {
 
   const projects = [
     {
+      title: "Job Search Tracker",
       description: "Job Tracker Website to keep track of job applications. Built with Javascript, Node.js, Express, and MongoDB.",
       imgUrl: projImg1,
       projUrl: "https://mah-search.vercel.app"
     },
     {
+      title: "BeMovies",
       description: "BeMovies is a movie database website that allows users to search for movies and view details. Built with Javascript, CSS and HTML.",
       imgUrl: projImg2,
       projUrl: "https://mateodedi.github.io/BeMovies/"
     },
     {
+      title: "Meal Finder",
       description: "A simple website that helps you find your next meal by fetching data from an API. Made with Javascript, SASS and HTML",
       imgUrl: projImg3,
       projUrl: "https://mateodedi.github.io/Meal_Finder/"
