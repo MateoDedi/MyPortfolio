@@ -1,8 +1,8 @@
 import { Container, Row, Col, Tab} from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/JOBtracker_img_display.png";
-import projImg2 from "../assets/img/BEMOVIES_img.png";
-import projImg3 from "../assets/img/meal_finder_img.PNG";
+import projImg2 from "../assets/img/BEMOVIES_imgimg_display.png";
+import projImg3 from "../assets/img/meal_finder_img_display.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 
 export const Projects = () => {
