@@ -88,7 +88,7 @@ export const Contact = () => {
       setStatus({
         success: true,
         message:
-          "Message sent successfully! I will get back to you as sson as possible!",
+          "Message sent successfully! I will get back to you as soon as possible!",
       });
     } else {
       setStatus({
