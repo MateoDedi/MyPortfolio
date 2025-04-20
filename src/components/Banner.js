@@ -12,7 +12,7 @@ export const Banner = () => {
   // eslint-disable-next-line no-unused-vars
   const [__, setIndex] = useState(1);
   
-  const toRotate = ["Web Developer", "Software Developer"];
+  const toRotate = ["Software Developer", "Web Developer"];
   const period = 2000;
 
   useEffect(() => {
